@@ -1,0 +1,9 @@
+identity,share_within_0p25,median_abs_residual
+lift pressure = discharge P - suction P (comp1),0.9827586206896551,0.0
+lift temperature = discharge T - suction T (comp1),0.89272030651341,0.0
+condenser approach = discharge sat. T - cond. water out (comp1),0.8888888888888888,2.220446049250313e-15
+evaporator approach = evap. water out - suction sat. T,0.7873563218390804,4.440892098500626e-16
+discharge superheat = discharge T - discharge sat. T (comp1),0.8256704980842912,3.552713678800501e-15
+suction superheat = suction T - suction sat. T,0.7605363984674329,4.440892098500626e-16
+"motor current / running load% is constant (comp1, median 2.252 A per %)",0.9865900383141762,0.006517088512175917
+"motor current / running load% is constant (comp2, median 2.153 A per %)",0.9827586206896551,0.006686827956989827

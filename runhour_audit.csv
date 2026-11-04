@@ -1,0 +1,11 @@
+chiller,counter,decreases,min,max
+Chiller - 1,hrs1,0,10798,10891
+Chiller - 1,hrs2,1,10671,40715
+Chiller - 2,hrs1,0,11403,11487
+Chiller - 2,hrs2,1,1232,11238
+Chiller - 3,hrs1,2,1179,11752
+Chiller - 3,hrs2,3,1199,11742
+Chiller - 4,hrs1,1,11925,12055
+Chiller - 4,hrs2,1,11209,11337
+Chiller - 5,hrs1,0,11676,11760
+Chiller - 5,hrs2,1,11689,11776

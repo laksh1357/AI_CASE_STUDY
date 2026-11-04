@@ -1,0 +1,24 @@
+feature,label,group
+cond_in,Cond. water in T,Condenser side
+cond_dT,Cond. water ΔT,Condenser side
+dis_sat1,Condensing T C1,Condenser side
+dis_sat2,Condensing T C2,Condenser side
+subcool1,Sub-cooling C1,Condenser side
+subcool2,Sub-cooling C2,Condenser side
+tower_I,Tower fan current,Condenser side
+condpump_I,Cond. pump current,Condenser side
+load1,Load C1,Load & capacity ctrl
+load2,Load C2,Load & capacity ctrl
+vfd1,VFD out C1,Load & capacity ctrl
+vfd2,VFD out C2,Load & capacity ctrl
+exv_out1,EXV output,Load & capacity ctrl
+evap_out,Chilled water out T,Evaporator side
+evap_dT,Chilled water ΔT,Evaporator side
+suc_sat,Evaporating T,Evaporator side
+suc_sh,Suction superheat,Evaporator side
+primpump_I,Primary pump current,Evaporator side
+dis_sh1,Disch. superheat C1,Compressor / refrig.
+dis_sh2,Disch. superheat C2,Compressor / refrig.
+exv_dp1,EXV ΔP C1,Compressor / refrig.
+oil_t,Oil temperature,Compressor / refrig.
+volt,Supply voltage,Electrical supply

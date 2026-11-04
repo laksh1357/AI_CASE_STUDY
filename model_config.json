@@ -1,0 +1,401 @@
+{
+  "data": {
+    "file": "Analyse_Chillers_AI_Course.xls",
+    "sheet": "Log_Chiller_South",
+    "records": 522,
+    "chillers": 5,
+    "cadence": "hourly, per-chiller (rotated duty)"
+  },
+  "split": {
+    "type": "chronological, whole days",
+    "train": [
+      "2026-03-11",
+      "2026-03-15"
+    ],
+    "validation": [
+      "2026-03-16",
+      "2026-03-17"
+    ],
+    "test": [
+      "2026-03-18",
+      "2026-03-20"
+    ],
+    "scored_rows": {
+      "train": 282,
+      "val": 115,
+      "test": 120
+    }
+  },
+  "cleaning": {
+    "range_rules": {
+      "evap_in": [
+        4,
+        16
+      ],
+      "evap_out": [
+        4,
+        12
+      ],
+      "cond_in": [
+        20,
+        40
+      ],
+      "cond_out": [
+        20,
+        45
+      ],
+      "load1": [
+        0,
+        105
+      ],
+      "load2": [
+        0,
+        105
+      ],
+      "amp1": [
+        0,
+        260
+      ],
+      "amp2": [
+        0,
+        260
+      ],
+      "dis_t1": [
+        30,
+        80
+      ],
+      "dis_t2": [
+        30,
+        80
+      ],
+      "dis_p1": [
+        3,
+        15
+      ],
+      "dis_p2": [
+        3,
+        15
+      ],
+      "suc_t": [
+        0,
+        15
+      ],
+      "suc_p": [
+        1.5,
+        4
+      ],
+      "liftT1": [
+        20,
+        60
+      ],
+      "liftT2": [
+        20,
+        60
+      ],
+      "liftP1": [
+        2,
+        9
+      ],
+      "liftP2": [
+        2,
+        9
+      ],
+      "suc_sat": [
+        0,
+        15
+      ],
+      "suc_sh": [
+        0,
+        10
+      ],
+      "evap_app": [
+        0,
+        12
+      ],
+      "dis_sat1": [
+        25,
+        50
+      ],
+      "dis_sat2": [
+        25,
+        50
+      ],
+      "dis_sh1": [
+        3,
+        25
+      ],
+      "dis_sh2": [
+        3,
+        25
+      ],
+      "cond_app1": [
+        0,
+        8
+      ],
+      "cond_app2": [
+        0,
+        8
+      ],
+      "liq_t1": [
+        20,
+        45
+      ],
+      "liq_t2": [
+        20,
+        45
+      ],
+      "oil_t": [
+        30,
+        70
+      ],
+      "vfd1": [
+        20,
+        100.5
+      ],
+      "vfd2": [
+        20,
+        100.5
+      ],
+      "exv_dp1": [
+        2,
+        8
+      ],
+      "exv_dp2": [
+        2,
+        8
+      ],
+      "exv_out1": [
+        0,
+        100.5
+      ],
+      "vR": [
+        380,
+        440
+      ],
+      "vY": [
+        380,
+        440
+      ],
+      "vB": [
+        380,
+        440
+      ],
+      "pp_suc": [
+        3,
+        8
+      ],
+      "pp_dis": [
+        5,
+        10
+      ],
+      "pp_iR": [
+        50,
+        90
+      ],
+      "pp_iY": [
+        50,
+        90
+      ],
+      "pp_iB": [
+        50,
+        90
+      ],
+      "cp_iR": [
+        40,
+        80
+      ],
+      "cp_iY": [
+        40,
+        80
+      ],
+      "cp_iB": [
+        40,
+        80
+      ],
+      "ct1R": [
+        5,
+        40
+      ],
+      "ct1Y": [
+        5,
+        40
+      ],
+      "ct1B": [
+        5,
+        40
+      ],
+      "ct2R": [
+        5,
+        40
+      ],
+      "ct2Y": [
+        5,
+        40
+      ],
+      "ct2B": [
+        5,
+        40
+      ]
+    },
+    "structural_states": [
+      "compressor off (running load = 0)",
+      "cooling-tower fan 2 off (all phases 0 A)"
+    ],
+    "invalid_cells": 28,
+    "load_current_A_per_pct": {
+      "1": 2.2525,
+      "2": 2.1526
+    }
+  },
+  "imputation": {
+    "step1": "causal forward fill within chiller, max 3 h",
+    "step2": "training median per chiller, then global training median",
+    "cells_imputed_scored_rows": 11
+  },
+  "features": {
+    "candidates": [
+      "cond_in",
+      "cond_dT",
+      "dis_sat1",
+      "dis_sat2",
+      "subcool1",
+      "subcool2",
+      "tower_I",
+      "condpump_I",
+      "load1",
+      "load2",
+      "vfd1",
+      "vfd2",
+      "exv_out1",
+      "evap_out",
+      "evap_dT",
+      "suc_sat",
+      "suc_sh",
+      "primpump_I",
+      "dis_sh1",
+      "dis_sh2",
+      "exv_dp1",
+      "exv_dp2",
+      "oil_t",
+      "volt"
+    ],
+    "dropped_redundant": {
+      "exv_dp2": [
+        "exv_dp1",
+        0.941
+      ]
+    },
+    "used": [
+      "cond_in",
+      "cond_dT",
+      "dis_sat1",
+      "dis_sat2",
+      "subcool1",
+      "subcool2",
+      "tower_I",
+      "condpump_I",
+      "load1",
+      "load2",
+      "vfd1",
+      "vfd2",
+      "exv_out1",
+      "evap_out",
+      "evap_dT",
+      "suc_sat",
+      "suc_sh",
+      "primpump_I",
+      "dis_sh1",
+      "dis_sh2",
+      "exv_dp1",
+      "oil_t",
+      "volt"
+    ],
+    "groups": {
+      "Condenser side": [
+        "cond_in",
+        "cond_dT",
+        "dis_sat1",
+        "dis_sat2",
+        "subcool1",
+        "subcool2",
+        "tower_I",
+        "condpump_I"
+      ],
+      "Load & capacity ctrl": [
+        "load1",
+        "load2",
+        "vfd1",
+        "vfd2",
+        "exv_out1"
+      ],
+      "Evaporator side": [
+        "evap_out",
+        "evap_dT",
+        "suc_sat",
+        "suc_sh",
+        "primpump_I"
+      ],
+      "Compressor / refrig.": [
+        "dis_sh1",
+        "dis_sh2",
+        "exv_dp1",
+        "oil_t"
+      ],
+      "Electrical supply": [
+        "volt"
+      ]
+    }
+  },
+  "scaling": {
+    "name": "RobustScaler (median/IQR)",
+    "fit_on": "training block only"
+  },
+  "model": {
+    "name": "LocalOutlierFactor",
+    "n_neighbors": 25,
+    "novelty": true,
+    "metric": "minkowski p=2 (Euclidean)",
+    "threshold": 1.3894,
+    "threshold_rule": "97.5th percentile of training LOF scores",
+    "k_grid": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      40,
+      60
+    ],
+    "k_rule": "smallest k with >=97% of best bootstrap rank-stability and k >= d+1"
+  },
+  "explainer": {
+    "name": "local feature perturbation",
+    "replacement": "value of a random one of the k nearest training neighbours",
+    "draws_R": 50,
+    "neighbours": 25,
+    "group_level": true,
+    "baseline": "global training median"
+  },
+  "evaluation": {
+    "stability_perturbations": [
+      "20 random-draw seeds",
+      "k_LOF in {10,15,40,60} and k_neighbourhood in {10,40,60}",
+      "20 x 85% training resamples (scaler+LOF refit)",
+      "20 x Gaussian noise sd 0.05 robust units"
+    ],
+    "n_cases": 15,
+    "injection": {
+      "shifts_robust_units": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "clip": "training [p0.5,p99.5]",
+      "draws_R": 30,
+      "test_inliers_used": 60
+    }
+  },
+  "seed": 42
+}

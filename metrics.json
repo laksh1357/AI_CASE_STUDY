@@ -1,0 +1,231 @@
+{
+  "lof_by_split": {
+    "train": {
+      "n": 282,
+      "median": 1.0099903231057845,
+      "max": 2.5253270934452043,
+      "flagged": 8
+    },
+    "val": {
+      "n": 115,
+      "median": 1.0357297827590795,
+      "max": 1.560132221152803,
+      "flagged": 5
+    },
+    "test": {
+      "n": 120,
+      "median": 1.0386087371542625,
+      "max": 2.2268722358249398,
+      "flagged": 9
+    }
+  },
+  "k": 25,
+  "threshold": 1.3893802799435582,
+  "k_selection_stability": 0.9585515434171878,
+  "case_study": [
+    {
+      "response": "lift",
+      "effect": "per +1 \u00b0C condenser water inlet",
+      "coef": 0.5914,
+      "ci_low": 0.3544,
+      "ci_high": 0.8103,
+      "unit": "\u00b0C",
+      "r2_train": 0.3929,
+      "r2_heldout": 0.4849,
+      "pct_of_mean_per_unit": 1.9341
+    },
+    {
+      "response": "lift",
+      "effect": "per +10 % mean load",
+      "coef": 0.4542,
+      "ci_low": 0.3089,
+      "ci_high": 0.6284,
+      "unit": "\u00b0C",
+      "r2_train": 0.3929,
+      "r2_heldout": 0.4849,
+      "pct_of_mean_per_unit": 1.4854
+    },
+    {
+      "response": "cop",
+      "effect": "per +1 \u00b0C condenser water inlet",
+      "coef": -0.1681,
+      "ci_low": -0.2325,
+      "ci_high": -0.0967,
+      "unit": "COP units",
+      "r2_train": 0.3577,
+      "r2_heldout": 0.406,
+      "pct_of_mean_per_unit": -1.8476
+    },
+    {
+      "response": "cop",
+      "effect": "per +10 % mean load",
+      "coef": -0.1393,
+      "ci_low": -0.1975,
+      "ci_high": -0.0921,
+      "unit": "COP units",
+      "r2_train": 0.3577,
+      "r2_heldout": 0.406,
+      "pct_of_mean_per_unit": -1.531
+    }
+  ],
+  "event_18mar_1300": {
+    "13:00 (event)": {
+      "cond_in": 34.75,
+      "condensing T": 39.587,
+      "lift": 35.488,
+      "load": 97.875,
+      "carnot COP": 7.813,
+      "tower fan current": 36.7
+    },
+    "12:00 (same chillers, 1 h before)": {
+      "cond_in": 30.4,
+      "condensing T": 36.15,
+      "lift": 31.575,
+      "load": 96.0,
+      "carnot COP": 8.808,
+      "tower fan current": 29.55
+    },
+    "change": {
+      "cond_in": 4.35,
+      "condensing T": 3.437,
+      "lift": 3.913,
+      "load": 1.875,
+      "carnot COP": -0.994,
+      "tower fan current": 7.15
+    },
+    "change_%": {
+      "cond_in": 14.309,
+      "condensing T": 9.509,
+      "lift": 12.391,
+      "load": 1.953,
+      "carnot COP": -11.289,
+      "tower fan current": 24.196
+    },
+    "predicted_by_regression": {
+      "cond_in": NaN,
+      "condensing T": NaN,
+      "lift": 2.573,
+      "load": NaN,
+      "carnot COP": NaN,
+      "tower fan current": NaN
+    }
+  },
+  "explanation_stability": {
+    "(a) other random draws": {
+      "Spearman \u03c1 (feature \u0394)": 0.9522,
+      "top-1 feature agrees": 0.9633,
+      "top-3 Jaccard": 0.9133,
+      "top-1 group agrees": 0.9733
+    },
+    "(b) neighbourhood size k": {
+      "Spearman \u03c1 (feature \u0394)": 0.7482,
+      "top-1 feature agrees": 0.8571,
+      "top-3 Jaccard": 0.7733,
+      "top-1 group agrees": 0.8857
+    },
+    "(c) 85 % training resample": {
+      "Spearman \u03c1 (feature \u0394)": 0.7824,
+      "top-1 feature agrees": 0.89,
+      "top-3 Jaccard": 0.756,
+      "top-1 group agrees": 0.8633
+    },
+    "(d) measurement noise": {
+      "Spearman \u03c1 (feature \u0394)": 0.8964,
+      "top-1 feature agrees": 0.97,
+      "top-3 Jaccard": 0.8873,
+      "top-1 group agrees": 0.9567
+    }
+  },
+  "sufficiency": {
+    "n_flagged": 14,
+    "top_group_restores_normal": 0.7142857142857143,
+    "top_feature_restores_normal": 0.7142857142857143,
+    "random_group_restores_normal": 0.21428571428571427,
+    "median_share_of_excess_score_removed_by_top_group": 0.5239934902552774
+  },
+  "plausibility_flag_rate_pct": {
+    "neighbourhood replacement (ours)": 0.37,
+    "global training median (naive)": 1.18,
+    "uniform in training [p1,p99]": 4.31,
+    "random training row's value": 2.42
+  },
+  "injection": {
+    "n_injections": 5139,
+    "n_detected": 366,
+    "detection_rate": 0.07122008172796264,
+    "accuracy_detected": {
+      "perturbation (ours)": {
+        "top-1 feature": 0.9399,
+        "top-3 features": 0.9809,
+        "top-1 group": 0.9672,
+        "top-1 feature (all injections, detected or not)": 0.7075,
+        "95% CI half-width (top-1, detected)": 0.0244
+      },
+      "naive median replacement": {
+        "top-1 feature": 0.9208,
+        "top-3 features": 0.9563,
+        "top-1 group": NaN,
+        "top-1 feature (all injections, detected or not)": 0.64,
+        "95% CI half-width (top-1, detected)": 0.0277
+      },
+      "largest |z| (no LOF)": {
+        "top-1 feature": 0.8115,
+        "top-3 features": 0.9481,
+        "top-1 group": NaN,
+        "top-1 feature (all injections, detected or not)": 0.5271,
+        "95% CI half-width (top-1, detected)": 0.0401
+      },
+      "random ranking": {
+        "top-1 feature": 0.0437,
+        "top-3 features": 0.1284,
+        "top-1 group": NaN,
+        "top-1 feature (all injections, detected or not)": 0.043,
+        "95% CI half-width (top-1, detected)": 0.0209
+      }
+    },
+    "by_delta": {
+      "2": {
+        "detection_rate": 0.0014,
+        "n_detected": 2.0,
+        "perturbation (ours) top-1": 0.0,
+        "naive median replacement top-1": 0.0,
+        "largest |z| (no LOF) top-1": 0.0,
+        "random ranking top-1": 0.0,
+        "ours top-1 group": 0.5
+      },
+      "3": {
+        "detection_rate": 0.0345,
+        "n_detected": 47.0,
+        "perturbation (ours) top-1": 0.8936,
+        "naive median replacement top-1": 0.8723,
+        "largest |z| (no LOF) top-1": 0.6596,
+        "random ranking top-1": 0.0213,
+        "ours top-1 group": 0.9149
+      },
+      "4": {
+        "detection_rate": 0.1131,
+        "n_detected": 142.0,
+        "perturbation (ours) top-1": 0.9577,
+        "naive median replacement top-1": 0.9366,
+        "largest |z| (no LOF) top-1": 0.831,
+        "random ranking top-1": 0.0352,
+        "ours top-1 group": 0.9789
+      },
+      "6": {
+        "detection_rate": 0.1536,
+        "n_detected": 175.0,
+        "perturbation (ours) top-1": 0.9486,
+        "naive median replacement top-1": 0.9314,
+        "largest |z| (no LOF) top-1": 0.8457,
+        "random ranking top-1": 0.0571,
+        "ours top-1 group": 0.9771
+      }
+    }
+  },
+  "data_quality": {
+    "invalid_cells": 28,
+    "rows_with_invalid": 21,
+    "compressor_off_rows": 5,
+    "imputed_cells_scored": 11
+  }
+}

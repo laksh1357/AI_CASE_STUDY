@@ -1,0 +1,5 @@
+,share of perturbed normal points that become flagged
+neighbourhood replacement (ours),0.0037379500295101316
+global training median (naive),0.011804052724768838
+"uniform in training [p1,p99]",0.04308479244540626
+random training row's value,0.024198308085776117

@@ -1,0 +1,16 @@
+rank,sl,chiller,time,split,LOF,flagged,top_group,imputed_cells,feature_1,obs_vs_nbr_median_1,feature_2,obs_vs_nbr_median_2,feature_3,obs_vs_nbr_median_3,identity_check
+1,86,CH5,03-18 14:00,test,2.23,True,Evaporator side (+1.18),0,Evaporating T (+1.09±0.01),11.0 vs 6.1,Primary pump current (+0.07±0.00),67.4 vs 69.8,Suction superheat (+0.03±0.00),2.0 vs 1.5,evap. approach off by +6.0; suction superheat off by +6.0
+2,90,CH5,03-18 13:00,test,2.22,True,Condenser side (+0.62),0,Cond. water in T (+0.33±0.00),34.8 vs 30.3,Primary pump current (+0.17±0.00),66.0 vs 69.8,EXV ΔP C1 (+0.14±0.00),5.5 vs 4.7,consistent
+3,93,CH1,03-18 13:00,test,2.16,True,Condenser side (+0.72),0,Cond. water in T (+0.37±0.00),34.9 vs 30.3,Condensing T C1 (+0.12±0.00),39.3 vs 35.9,EXV ΔP C1 (+0.07±0.00),5.2 vs 4.5,consistent
+4,92,CH3,03-18 13:00,test,2.13,True,Condenser side (+0.66),0,Cond. water in T (+0.30±0.00),34.5 vs 30.3,EXV ΔP C1 (+0.13±0.00),5.4 vs 4.7,Condensing T C1 (+0.08±0.00),39.3 vs 36.3,consistent
+5,91,CH4,03-18 13:00,test,2.05,True,Condenser side (+0.63),0,Cond. water in T (+0.36±0.00),34.8 vs 30.5,EXV ΔP C1 (+0.16±0.00),5.4 vs 4.5,Condensing T C1 (+0.11±0.00),39.3 vs 35.9,consistent
+6,58,CH4,03-19 02:00,test,1.86,True,Condenser side (+0.69),0,Cond. water ΔT (+0.63±0.00),1.4 vs 2.6,Primary pump current (+0.06±0.00),68.5 vs 70.5,EXV ΔP C1 (+0.04±0.00),4.0 vs 4.3,suction superheat off by -1.1
+7,150,CH5,03-17 13:00,val,1.56,True,Evaporator side (+0.24),0,Primary pump current (+0.20±0.00),66.1 vs 69.6,Load C1 (+0.17±0.02),85.0 vs 98.0,Suction superheat (+0.05±0.00),2.5 vs 1.7,consistent
+8,221,CH5,03-16 08:00,val,1.51,True,Condenser side (+0.52),0,Cond. water ΔT (+0.52±0.00),0.4 vs 2.2,Load C1 (+0.02±0.00),53.0 vs 58.0,Cond. water in T (+0.01±0.00),29.7 vs 28.7,consistent
+9,131,CH1,03-17 19:00,val,1.48,True,Load & capacity ctrl (+0.26),0,Load C2 (+0.27±0.01),52.0 vs 86.0,Cond. water ΔT (+0.09±0.00),2.1 vs 2.7,Primary pump current (+0.06±0.00),68.8 vs 70.4,consistent
+10,132,CH5,03-17 18:00,val,1.45,True,Load & capacity ctrl (+0.18),0,Load C1 (+0.18±0.01),86.0 vs 98.0,Primary pump current (+0.17±0.01),65.7 vs 69.3,Disch. superheat C1 (+0.01±0.00),14.6 vs 14.1,consistent
+11,70,CH1,03-18 19:00,test,1.44,True,Load & capacity ctrl (+0.22),0,Supply voltage (+0.09±0.01),404.0 vs 409.3,Load C2 (+0.08±0.01),64.0 vs 91.0,Primary pump current (+0.07±0.00),68.1 vs 69.9,consistent
+12,76,CH3,03-18 17:00,test,1.44,True,Evaporator side (+0.15),0,Load C1 (+0.14±0.01),88.0 vs 98.0,Primary pump current (+0.10±0.01),68.0 vs 70.4,Supply voltage (+0.06±0.00),404.0 vs 409.7,consistent
+13,75,CH4,03-18 17:00,test,1.4,True,Load & capacity ctrl (+0.14),0,Load C2 (+0.14±0.00),74.0 vs 94.0,Primary pump current (+0.09±0.01),67.7 vs 70.0,Supply voltage (+0.08±0.00),404.0 vs 408.3,consistent
+14,125,CH4,03-17 21:00,val,1.4,True,Condenser side (+0.13),0,Cond. water ΔT (+0.15±0.00),1.7 vs 2.6,EXV output (+0.03±0.00),100.0 vs 88.9,Suction superheat (+0.01±0.00),2.2 vs 1.8,consistent
+15,167,CH4,03-17 07:00,val,1.38,False,Load & capacity ctrl (+0.11),0,Cond. water ΔT (+0.06±0.00),2.0 vs 2.6,Load C2 (+0.03±0.01),75.0 vs 94.0,VFD out C2 (+0.02±0.01),71.3 vs 86.1,consistent
